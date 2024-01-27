@@ -9,6 +9,9 @@ import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import UserForm from './components/UserForm';
 import Demo from './components/Demo';
+import Landing from './components/Landing';
+import Footer from './components/Footer';
+import RiskForm from './components/RiskForm';
 import About from './components/About';
 import Home from './components/Home';
 import HomeNews from './components/HomeNews';
@@ -17,7 +20,10 @@ function App() {
   return (
     <>
       
-      <Router >
+    <Router >
+    <Navbar />  
+    <Landing />
+    <Footer />
     {/* <Navbar /> */}
     <div className='container'>
     <Routes>
