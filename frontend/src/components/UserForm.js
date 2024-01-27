@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './css/form.css'
 
 function UserForm() {
   const [ans, setAns] = useState({
@@ -36,11 +37,11 @@ function UserForm() {
     setAns({ ...ans, [e.target.name]: e.target.value });
   };
   return (
-    <div>
+    <div className="main-div">
       <form onSubmit={handleClick}>
         <div>
-          <p>1) Investment Time Horizon:</p>
-          <p>q: "How long do you plan to invest your money?"</p>
+          <h4> 1) How long do you plan to invest your money?</h4>
+          <br></br>
           <input
             type="radio"
             id="short_term"
@@ -70,12 +71,13 @@ function UserForm() {
           <br />
         </div>
         <hr />
+
         <div>
-          <p>2) Comfort Level with Market Fluctuations:</p>
-          <p>
-            q: "How comfortable are you with the idea that the value of your
-            investments may go up and down in the short term?"
-          </p>
+          <h4>
+             2) How comfortable are you with the idea that the value of your
+            investments may go up and down in the short term?
+          </h4>
+          <br></br>
           <input
             type="radio"
             id="very_comfortable"
@@ -118,11 +120,12 @@ function UserForm() {
         </div>
         <hr />
         <div>
-          <p>3) Previous Investment Experience:</p>
-          <p>
-            q: "What is your level of experience with investing in
-            cryptocurrencies or traditional assets?"
-          </p>
+          
+          <h4>
+            3)  What is your level of experience with investing in
+            cryptocurrencies or traditional assets?
+          </h4>
+          <br></br>
           <input type="radio" id="beginner" name="q3" value="beginner" />
           <label htmlFor="beginner">Beginner (limited or no experience)</label>
           <br />
@@ -143,8 +146,7 @@ function UserForm() {
         </div>
         <hr />
         <div>
-          <p>4) Financial Goals:</p>
-          <p>q: "What are your primary financial goals for investing?"</p>
+          <h4> 4) What are your primary financial goals for investing?</h4><br></br>
           <input
             type="radio"
             id="wealth_preservation"
@@ -181,11 +183,10 @@ function UserForm() {
         </div>
         <hr />
         <div>
-          <p>5) Reaction to Potential Losses:</p>
-          <p>
-            q: "How would you react if your investment portfolio experienced a
-            significant decline in value?"
-          </p>
+          <h4>5)
+             How would you react if your investment portfolio experienced a
+            significant decline in value?
+          </h4><br></br>
           <input
             type="radio"
             id="stay_the_course"
@@ -222,8 +223,7 @@ function UserForm() {
         </div>
         <hr />
         <div>
-          <p>6) Current Financial Situation:</p>
-          <p>q: "How would you describe your current financial situation?"</p>
+          <h4>6) How would you describe your current financial situation?</h4><br></br>
           <input
             type="radio"
             id="comfortable"
@@ -260,8 +260,7 @@ function UserForm() {
         </div>
         <hr />
         <div>
-          <p>7) Knowledge of Cryptocurrency:</p>
-          <p>q: "How would you rate your knowledge of cryptocurrencies?"</p>
+          <h4>7) How would you rate your knowledge of cryptocurrencies?</h4><br></br>
           <input
             type="radio"
             id="expert"
@@ -294,11 +293,10 @@ function UserForm() {
         </div>
         <hr />
         <div>
-          <p>8) Emergency Fund:</p>
-          <p>
-            q: "Do you have an emergency fund set aside for unexpected
-            expenses?"
-          </p>
+          <h4>
+            8) Do you have an emergency fund set aside for unexpected
+            expenses?
+          </h4><br></br>
           <input
             type="radio"
             id="well_prepared"
@@ -329,11 +327,10 @@ function UserForm() {
         </div>
         <hr />
         <div>
-          <p>9) Risk Capacity:</p>
-          <p>
-            q: "How much of your total investment portfolio are you willing to
-            allocate to higher-risk investments?"
-          </p>
+          <h4>
+            9) How much of your total investment portfolio are you willing to
+            allocate to higher-risk investments?
+          </h4><br></br>
           <input
             type="radio"
             id="aggressive"
@@ -368,11 +365,10 @@ function UserForm() {
         </div>
         <hr />
         <div>
-          <p>10) Liquidity Needs:</p>
-          <p>
-            q: "How soon might you need to access a significant portion of your
-            investment funds?"
-          </p>
+          <h4>
+            10) How soon might you need to access a significant portion of your
+            investment funds?
+          </h4><br></br>
           <input
             type="radio"
             id="no_immediate_need"
@@ -409,8 +405,7 @@ function UserForm() {
         </div>
         <hr />
         <div>
-          <p>11) Retirement Planning Efforts:</p>
-          <p>q: "How would you rate your retirement planning efforts?"</p>
+          <h4>11) How would you rate your retirement planning efforts?</h4><br></br>
           <input
             type="radio"
             id="well_prepared"
@@ -444,17 +439,13 @@ function UserForm() {
             Not prepared (Have not started planning)
           </label>
           <br />
-          <p>
-            Sample Response: "I believe I am well-prepared for retirement with a
-            solid plan in place."
-          </p>
+          
         </div>
         <hr />
         <div>
-          <p>12) Debt Management:</p>
-          <p>
-            q: "How would you describe your current approach to managing debt?"
-          </p>
+          <h4>
+            12)  How would you describe your current approach to managing debt?
+          </h4><br></br>
           <input
             type="radio"
             id="proactive_debt_management"
@@ -488,18 +479,14 @@ function UserForm() {
             Reactive (Struggling to manage debt effectively)
           </label>
           <br />
-          <p>
-            Sample Response: "I am proactive in managing my debt, consistently
-            paying it off and avoiding new debt whenever possible."
-          </p>
+          
         </div>
         <hr />
         <div>
-          <p>13) Investment Diversification:</p>
-          <p>
-            q: "How diversified is your investment portfolio across different
+          <h4>
+            13) "How diversified is your investment portfolio across different
             asset classes?"
-          </p>
+          </h4><br></br>
           <input
             type="radio"
             id="highly_diversified"
@@ -533,15 +520,11 @@ function UserForm() {
             Not diversified (Concentrated in a few assets)
           </label>
           <br />
-          <p>
-            Sample Response: "My investment portfolio is highly diversified
-            across different asset classes."
-          </p>
+       
         </div>
         <hr />
         <div>
-          <p>14) Financial Goals:</p>
-          <p>q: "How clear are your financial goals and objectives?"</p>
+          <h4>14) How clear are your financial goals and objectives?</h4><br></br>
           <input
             type="radio"
             id="crystal_clear_goals"
@@ -575,18 +558,14 @@ function UserForm() {
             Unclear (Lack clear financial goals)
           </label>
           <br />
-          <p>
-            Sample Response: "I have crystal clear financial goals with specific
-            targets and timelines."
-          </p>
+       
         </div>
         <hr />
         <div>
-          <p>15) Tax Planning:</p>
-          <p>
-            q: "How proactive are you in managing your taxes and maximizing tax
-            efficiency?"
-          </p>
+          <h4>
+            15) How proactive are you in managing your taxes and maximizing tax
+            efficiency?
+          </h4><br></br>
           <input
             type="radio"
             id="very_proactive_tax_planning"
@@ -623,12 +602,9 @@ function UserForm() {
             decisions)
           </label>
           <br />
-          <p>
-            Sample Response: "I am very proactive in managing my taxes,
-            constantly seeking ways to maximize tax efficiency."
-          </p>
+        
         </div>
-
+        <br></br>
         <button type="submit">Submit</button>
       </form>
     </div>
