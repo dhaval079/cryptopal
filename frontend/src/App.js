@@ -9,21 +9,26 @@ import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import UserForm from './components/UserForm';
 import Demo from './components/Demo';
+import About from './components/About';
+import Home from './components/Home';
+import HomeNews from './components/HomeNews';
 
 function App() {
   return (
     <>
       
       <Router >
-    <Navbar />
+    {/* <Navbar /> */}
     <div className='container'>
     <Routes>
-          <Route exact path="/" element={<Demo />} />
-          {/* <Route exact path="/" element={<Home />} />
-          <Route exact path="/about" element={<About />} /> */}
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/form" element={<UserForm />} />
+          
+          <Route exact path="/demo" element={<HomeNews />} />
+
             
     </Routes>
     </div>
