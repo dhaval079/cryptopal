@@ -1,16 +1,31 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios';
 import './css/home.css'
 import HomeNews from './HomeNews';
 
  function Home() {
-    useEffect(() => {
+    // useEffect(() => {
+    //     axios.get("https://newsapi.org/v2/everything?q=crypto&from=2024-01-26&to=2024-01-26&sortBy=popularity&pageSize=5&apiKey=cc2b54014ad943e690635af264e34e7d")
+    //     .then((response)=>{
+    //         return response.data.articles;
+    //     }).then((data)=>{
+    //         newsCurrent.current = data;
+    //     });
+    // }, []);
+
+    const [news, setNews]= useState([]);
+    const getNews = ()=>{
         axios.get("https://newsapi.org/v2/everything?q=crypto&from=2024-01-26&to=2024-01-26&sortBy=popularity&pageSize=5&apiKey=cc2b54014ad943e690635af264e34e7d")
-        .then((response)=>{
-            console.log(response);
-        });
-    }, [])
-    
+        .then((res)=>{
+            setNews(res.data.articles)
+        })
+    }
+
+    useEffect(()=>{
+        getNews();
+    },[]);
+
+    console.log(news);
     
   return (
     <div id='home-section'>
@@ -19,12 +34,16 @@ import HomeNews from './HomeNews';
         <p id='heading-quote'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
     </div>
     <div className='news-section'>
-        {/* {news.map((ele)=>{
-            return <HomeNews 
-                title={news.title}
-                imgUrl = {news.urlToImage}, url, desc
-            />
-        })} */}
+        {
+            news.map((ele)=>{
+            return (<HomeNews 
+                title={ele.title}
+                imgUrl = {ele.urlToImage}
+                url = {ele.url}
+                desc = {ele.description}
+            />);
+        })
+        }
     </div>
     </div>
   )
