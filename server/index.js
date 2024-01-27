@@ -11,9 +11,7 @@ app.use(express.json())
 
 
 app.use("/api/user", require("./routes/user"));
-app.get("/", (req,res)=>{
-    res.write("Hello Meet")
-})
+app.use("/api/form", require("./routes/form"));
 
 
 app.listen(port, ()=>{

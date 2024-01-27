@@ -21,7 +21,7 @@ const Navbar = () => {
     >
       <div className="container-fluid">
         <Link className="navbar-brand" to="#">
-          iNotebook
+          CryptoPal
         </Link>
         <button
           className="navbar-toggler"
