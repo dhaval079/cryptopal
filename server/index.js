@@ -10,9 +10,10 @@ app.use(cors())
 app.use(express.json())
 
 
-// app.use("/api/user", require("./routes/user"));
-// app.use("/api/group", require("./routes/group"));
-// app.use("/api/expense", require("./routes/expense"));
+app.use("/api/user", require("./routes/user"));
+app.get("/", (req,res)=>{
+    res.write("Hello Meet")
+})
 
 
 app.listen(port, ()=>{
