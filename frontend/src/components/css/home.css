@@ -11,8 +11,8 @@ body {
   /* Ensure the gradient covers the entire viewport */
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 

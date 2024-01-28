@@ -1,0 +1,31 @@
+.news-list-heading{
+    align-items: center;
+  font-family: 'Share Tech', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2%;
+  color: white;
+  opacity: 60%;
+}
+
+.sentiment-main{
+    padding: 2% 4% 0% ;
+    text-align: center;
+}
+.news-list{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.card{
+    width: 75%;
+    padding: 1rem 1.3rem;
+    margin-bottom: 3.2rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    }
+
+.card-button{
+    margin-top: 3%;
+}
