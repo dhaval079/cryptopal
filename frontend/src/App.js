@@ -22,8 +22,6 @@ function App() {
       
     <Router >
     <Navbar />  
-    <Landing />
-    <Footer />
     {/* <Navbar /> */}
     <div className='container'>
     <Routes>

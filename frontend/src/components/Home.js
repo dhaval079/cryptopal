@@ -34,6 +34,7 @@ import HomeNews from './HomeNews';
         <p id='heading-quote'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
     </div>
     <div className='news-section'>
+    <h3 className='news-heading'>News Highlights</h3>
         {
             news.map((ele)=>{
             return (<HomeNews 

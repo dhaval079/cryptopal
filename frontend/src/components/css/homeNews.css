@@ -1,13 +1,14 @@
+.news{
+    padding: 0;
+}
 .news-main{
     height: 15vh;
     width: 100%;
     box-sizing:content-box;
-    
-    
-}
-#news-Main{
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     padding: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.379) !important;
 }
 .news-img{
     box-sizing: border-box;
@@ -16,12 +17,13 @@
     object-fit: cover;
 }
 .card-img{
-    height: 90%;
+    height: 100%;
     width:90%;
-    padding: 10px 30px 0;
+    padding: 25px 40px 0 40px;
     margin: 0;
     object-fit: cover;
 }
 .news-desc{
+    padding-top: 15px;
     font-size: 9px;
 }
